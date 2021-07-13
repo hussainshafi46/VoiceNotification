@@ -1,17 +1,28 @@
 <resources>
     <string name="app_name">Voice Notification</string>
+
+    <!-- Preference Category Titles -->
+    <string name="category_settings">Service Settings</string>
+    <string name="category_advanced">Advanced</string>
+    <string name="category_debug">Debug</string>
+
     <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
+    <string name="master_title">Enable Service</string>
+    <string name="language_title">Default Language</string>
+    <string name="smart_title">Smart Hours</string>
+    <string name="complete_notif_title">Complete Notifications</string>
+    <string name="test_notif_title">Send Test Notification</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
+    <!-- Preference Summaries -->
+    <string name="master_on">Service Running</string>
+    <string name="master_off">Service Disabled</string>
+    <string name="smart_on">Silent Notifications during 10PM to 6 AM</string>
+    <string name="smart_off">Voice Notification enabled All Times</string>
+    <string name="complete_on">Notification will be read completely before starting next notification</string>
+    <string name="complete_off">Skip reading current notification and start reading latest notification</string>
 
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- Test Preference -->
+    <string name="en">Your Wallet credited with 100 rupees</string>
+    <string name="hi">आपके वॉलेट में 100 रुपये पर्याप्त किए गए</string>
+
 </resources>

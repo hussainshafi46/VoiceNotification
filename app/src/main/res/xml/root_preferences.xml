@@ -1,35 +1,47 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="@string/messages_header">
-
-        <EditTextPreference
-            app:key="signature"
-            app:title="@string/signature_title"
-            app:useSimpleSummaryProvider="true" />
-
+    <PreferenceCategory
+        app:icon="@drawable/ic_gears"
+        app:title="@string/category_settings">
+        <SwitchPreferenceCompat
+            android:summaryOff="@string/master_off"
+            android:summaryOn="@string/master_on"
+            app:defaultValue="true"
+            app:key="master"
+            app:title="@string/master_title" />
         <ListPreference
-            app:defaultValue="reply"
-            app:entries="@array/reply_entries"
-            app:entryValues="@array/reply_values"
-            app:key="reply"
-            app:title="@string/reply_title"
+            app:defaultValue="en_IN"
+            app:dependency="master"
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:key="default_lang"
+            app:title="@string/language_title"
             app:useSimpleSummaryProvider="true" />
-
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/sync_header">
-
+    <PreferenceCategory
+        app:icon="@drawable/ic_advance"
+        app:title="@string/category_advanced">
         <SwitchPreferenceCompat
-            app:key="sync"
-            app:title="@string/sync_title" />
-
-        <SwitchPreferenceCompat
-            app:dependency="sync"
-            app:key="attachment"
-            app:summaryOff="@string/attachment_summary_off"
-            app:summaryOn="@string/attachment_summary_on"
-            app:title="@string/attachment_title" />
-
+            app:defaultValue="true"
+            app:key="smart"
+            app:summaryOff="@string/smart_off"
+            app:summaryOn="@string/smart_on"
+            app:title="@string/smart_title" />
+        <SwitchPreference
+            app:defaultValue="true"
+            app:key="complete_notify"
+            app:summaryOff="@string/complete_off"
+            app:summaryOn="@string/complete_on"
+            app:title="@string/complete_notif_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:icon="@drawable/ic_test"
+        app:title="@string/category_debug">
+        <Preference
+            app:key="testing"
+            app:title="@string/test_notif_title" />
     </PreferenceCategory>
 
 </PreferenceScreen>
